@@ -56,7 +56,7 @@ export class SimpleMask {
   protected fitToMask(value: string): string {
     let newValue = '';
     // value size adjust to mask size
-    const size = this.mask.replace(/\\(?!\\)/g, '').length;
+    const size = this.mask?.replace(/\\(?!\\)/g, '').length;
     value = value.substring(0, size);
 
     if (this.fillWithExpected) {
